@@ -1,0 +1,17 @@
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+ 
+  <changeSet id="add-sp_count_emp" author="gsierro">
+    <createTable tableName="rodrigo">
+      <column name="roger" type="varchar(50)"></column>
+    </createTable>
+  </changeSet>
+  
+  <changeSet id="tag-1.5" author="gsierro">
+    <tagDatabase tag="1.5" />
+  </changeSet>
+ 
+</databaseChangeLog>
