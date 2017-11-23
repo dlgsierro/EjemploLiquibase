@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('Prepare') {
       steps {
-        sh 'checkout scm'
-        sh 'cleanWS()'
+        cleanWs()
+        checkout scm
       }
     }
     stage('Build') {
@@ -15,7 +15,8 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'mvn test findbugs:findbugs'
+        sh 'mvn test'
+        junit 'target/surefire-reports/*.xml'
       }
     }
   }
